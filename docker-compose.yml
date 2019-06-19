@@ -1,0 +1,19 @@
+version: '3.7'
+
+volumes:
+  app:
+    driver: local
+
+services:
+  app:
+    container_name: py-api
+    restart: always
+    image: docker.wyzdev.dog/mwebster/py-api:latest
+    build:
+      context: .
+    ports: 
+      - 3001:3001
+    expose:
+      - 3001
+    volumes:
+      - ./:/py-api
