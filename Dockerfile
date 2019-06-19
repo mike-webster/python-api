@@ -8,4 +8,4 @@ RUN pip install Django djangorestframework
 
 EXPOSE 3001
 
-CMD ["python", "sleep.py"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:3001"]
