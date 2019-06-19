@@ -4,4 +4,8 @@ WORKDIR /py-api
 
 COPY . .
 
+RUN pip install Django djangorestframework
+
 EXPOSE 3001
+
+CMD ["python", "sleep.py"]
